@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Crud App',
+  title: 'Crud-Application',
   description: 'Create by ~ Zain-ul-Abdin',
 }
 
@@ -17,6 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} relative`} >
+        <head>
+          <link rel="shortcut icon" href="/check.png" type="image/x-icon" />
+          <title>Crud-Application</title>
+        </head>
         <Navbar />
         <div className='mt-8  px-[20px] md:px-[50px]'>
           {children}
