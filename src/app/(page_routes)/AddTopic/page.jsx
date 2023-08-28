@@ -7,11 +7,11 @@ const AddTopic = () => {
 
     let title = formData.get("title");
     let description = formData.get("description");
-    console.log("title", title);
 
     if (!title && !description) return;
 
     const response = await AddTopics({ title, description });
+    console.log(response);
   };
 
   return (

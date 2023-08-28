@@ -1,9 +1,10 @@
 import React from 'react'
+import TopicList from './components/TopicList/page'
 
 const Home = () => {
   return (
     <div className='w-full'>
-      Home
+      <TopicList/>
     </div>
   )
 }
