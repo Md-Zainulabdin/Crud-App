@@ -7,8 +7,8 @@ const Navbar = () => {
       <Link href={"/"} className="logo">
         <h1 className="text-2xl font-semibold">CRUD APP</h1>
       </Link>
-      <Link href={"/addTopic"} className="menu">
-        <span className="border-2 border-slate-300 transition duration-300 ease-in-out rounded-full px-5 py-2 hover:bg-white hover:text-[#222]">Add product</span>
+      <Link href={"/AddTopic"} className="menu">
+        <span className="border-2 border-slate-300 transition duration-300 ease-in-out rounded-full px-5 py-2 hover:bg-white hover:text-[#222]">Add Topics</span>
       </Link>
     </nav>
   );
