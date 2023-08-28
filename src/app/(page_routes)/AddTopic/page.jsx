@@ -1,14 +1,18 @@
+import { AddTopics } from "@/app/serverAction";
 import React from "react";
 
 const AddTopic = () => {
-
   const addTopicHandler = async (formData) => {
-    'use server'
+    "use server";
 
     let title = formData.get("title");
     let description = formData.get("description");
+    console.log("title", title);
 
-  }
+    if (!title && !description) return;
+
+    const response = await AddTopics({ title, description });
+  };
 
   return (
     <div className="w-full">
@@ -34,7 +38,10 @@ const AddTopic = () => {
           ></textarea>
 
           <div>
-            <button type="submit" className="text-left px-6 py-2 transition duration-300 ease-in-out border-2 rounded-full border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white">
+            <button
+              type="submit"
+              className="text-left px-6 py-2 transition duration-300 ease-in-out border-2 rounded-full border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white"
+            >
               Add Topic
             </button>
           </div>
