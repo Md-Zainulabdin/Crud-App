@@ -1,24 +1,12 @@
-import { AddTopics } from "@/app/serverAction";
+import HeroText from "@/app/components/HeroText/page";
+import { addTopicHandler } from "@/app/serverAction";
 import React from "react";
 
 const AddTopic = () => {
-  const addTopicHandler = async (formData) => {
-    "use server";
-
-    let title = formData.get("title");
-    let description = formData.get("description");
-
-    if (!title && !description) return;
-
-    const response = await AddTopics({ title, description });
-    console.log(response);
-  };
-
   return (
-    <div className="w-full">
-      <div className="title text-3xl text-[#222] font-medium">
-        Add New Topic..
-      </div>
+    <div className="w-full h-[90vh]">
+      <HeroText value={'🚀 Add New Topics...'}/>
+      <hr className="my-8"/>
       <div className="form-element w-full md:w-[70%] mt-6">
         <form action={addTopicHandler} className="flex flex-col gap-5">
           <input

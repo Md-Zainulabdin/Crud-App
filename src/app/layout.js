@@ -1,4 +1,7 @@
 import Navbar from './components/Navbar/page'
+import Footer from './components/footer/page'
+import { ToastContainer } from './nexttoast'
+import 'react-toastify/dist/ReactToastify.css';
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
@@ -15,11 +18,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`} >
+      <body className={`${poppins.className} relative`} >
+        <ToastContainer />
         <Navbar />
-        <div className='mt-8 px-[30px] md:px-[50px]'>
+        <div className='mt-8  px-[20px] md:px-[50px]'>
           {children}
         </div>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   )

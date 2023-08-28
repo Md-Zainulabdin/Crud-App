@@ -1,9 +1,12 @@
+import HeroText from "@/app/components/HeroText/page";
 import { UpdateTopics } from "@/app/serverAction";
+import { revalidateTag } from "next/cache";
+import { redirect } from "next/navigation";
 
 const UpdateTopic = ({ params }) => {
   let id = params.topicId;
   const updateTopicHandler = async (formData) => {
-    "use server"
+    "use server";
 
     let title = formData.get("title");
     let description = formData.get("description");
@@ -11,10 +14,15 @@ const UpdateTopic = ({ params }) => {
     if (!title && !description) return;
 
     const response = await UpdateTopics(id, { title, description });
+    if (response.status === "OK") {
+      redirect("/");
+    }
+    revalidateTag("topics");
   };
   return (
-    <div className="w-full">
-      <div className="title text-3xl text-[#222] font-medium">Update Topic</div>
+    <div className="w-full h-[90vh]">
+      <HeroText value={"Update Topic"} />
+      <hr className="my-8"/>
       <div className="form-element w-full md:w-[70%] mt-6">
         <form action={updateTopicHandler} className="flex flex-col gap-5">
           <input
