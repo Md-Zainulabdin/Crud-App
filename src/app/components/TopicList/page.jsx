@@ -6,7 +6,7 @@ import { dateBuilder } from "@/utils/dateBuilder";
 
 const getTopics = async () => {
   try {
-    const res = await fetch(`${process.env.BASE_URL}/api/topics`, {
+    const res = await fetch(`${process.env.BASE_URL}api/topics`, {
       cache: "no-cache",
       next: {
         tags: ["topics"],

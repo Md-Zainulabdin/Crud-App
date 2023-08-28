@@ -33,7 +33,7 @@ export const DeleteTopicsFromDB = async (id) => {
 
 const AddTopics = async (data) => {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/topics`, {
+        const res = await fetch(`${process.env.BASE_URL}api/topics`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
