@@ -25,7 +25,7 @@ const TopicList = async () => {
 
   return (
     <div className="All-Topics w-full relative pb-12">
-      <HeroText value={'All Topics..'}/>
+      <HeroText value={'📝 All Topics..'}/>
       <div className="w-full md:w-[70%] py-10 flex flex-col gap-6">
         {topics?.data ? (
           topics?.data?.map((currElem) => (

@@ -5,8 +5,8 @@ import {FaLinkedinIn} from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <div className="w-full absolute border-t bottom-0 left-0 bg-white px-[30px] md:px-[50px]">
-      <div className="w-full my-4 flex justify-between items-center">
+    <div className="w-full absolute border-t bottom-0 left-0 bg-white px-[15px] md:px-[50px]">
+      <div className="w-full py-2 flex justify-between items-center">
         <div>
           <h1 className="text-md md:text-xl">Developed by ~ Zain-ul-Abdin</h1>
         </div>

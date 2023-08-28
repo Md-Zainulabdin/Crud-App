@@ -58,7 +58,6 @@ export const addTopicHandler = async (formData) => {
 
     const response = await AddTopics({ title, description });
     if (response.status === "OK"){
-        alert("Topic add successfully")
         redirect('/')
     }
     revalidateTag("topics")

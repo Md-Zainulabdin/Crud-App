@@ -21,7 +21,7 @@ const UpdateTopic = ({ params }) => {
   };
   return (
     <div className="w-full h-[90vh]">
-      <HeroText value={"Update Topic"} />
+      <HeroText value={"⚡ Update Topic"} />
       <hr className="my-8"/>
       <div className="form-element w-full md:w-[70%] mt-6">
         <form action={updateTopicHandler} className="flex flex-col gap-5">
