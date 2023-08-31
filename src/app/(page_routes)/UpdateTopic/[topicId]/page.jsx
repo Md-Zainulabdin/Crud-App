@@ -28,6 +28,7 @@ const UpdateTopic = ({ params }) => {
           <input
             type="text"
             name="title"
+            autoFocus={true}
             required
             className="border p-3 rounded-md outline-indigo-400"
             placeholder="Add Title"

@@ -13,6 +13,7 @@ const AddTopic = () => {
             type="text"
             name="title"
             required
+            autoFocus={true}
             className="border p-3 rounded-md outline-indigo-400"
             placeholder="Add Title"
           />
